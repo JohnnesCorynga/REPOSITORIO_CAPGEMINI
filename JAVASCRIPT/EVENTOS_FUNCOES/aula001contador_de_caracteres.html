@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de caracteres</title>
+    <style>
+        main{
+            margin: auto;
+            border-radius: 15px;
+            width: 600px;
+            height: 500px;
+            color: aliceblue;
+            background-color: rgba(41, 38, 38, 0.918);
+        }
+    </style>
+</head>
+<body >
+    <main >
+        <input type="text" onc id="textoP" onkeyup="mostrar()">
+        
+        <h3 id="resultado" >
+
+        </h3>
+       
+    </main>
+
+
+    <script>
+       
+        
+        function mostrar(){
+            var textoPrinci = document.querySelector('#textoP').value;
+            var res= document.querySelector('#resultado');
+            var maiu = textoPrinci.toUpperCase();
+            var minu = textoPrinci.toLowerCase();
+            var contador = textoPrinci.length
+            res.innerHTML = `</br>Esse é o texto em letras MAIÚSCULAS: ${maiu}`
+            res.innerHTML += `</br>Esse é o texto em letras minusculas: ${minu}`
+            res.innerHTML += `</br>Quantidades de caracteres digitados: ${contador}`
+        }
+        
+
+        
+        
+   </script>
+</body>
+</html>

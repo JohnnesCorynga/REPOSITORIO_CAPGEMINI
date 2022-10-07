@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade - jQuery</title>
+    <!--jQuery-->
+    <script src="jquery-3.6.0.min.js"></script>
+    <!--Script-->
+    <script>
+        $(document).ready(function(){
+            //Ocultar H1
+            $("h1").css("display","none");
+
+            //Exibir H1 
+            $("#exibir").click(function(){
+                $("h1").fadeIn();
+                $("img").fadeOut();//ocultando imagem
+            });
+            //Ocultar o H1
+            $("#ocultar").click(function(){
+                $("h1").fadeOut();
+                $("img").fadeIn();//Exibindo imagem
+            })
+        });
+
+    </script>
+    <style>
+        img{
+            margin-top: 75px;
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <button id="exibir">Exibir</button>
+    <button id="ocultar">Ocultar</button>
+    <hr>
+    <h1>Aprendendo jQuery</h1>
+    <img src="logo-eragon=800.png" alt="">
+</body>
+</html>

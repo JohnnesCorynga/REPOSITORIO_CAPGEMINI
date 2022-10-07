@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento de Teclado</title>
+</head>
+<body>
+    <h1>Evento de Teclado</h1>
+    <h2>onKeyUp =></h2>
+    <h3>Exibe o caractere e depois execulta a ação</h3>
+    <h2>onKeyDown =></h2>
+    <h3>Primeiro Execulta a ação e depois Exibi o caractere</h3>
+    <h2>onKeyPress =></h2>
+    <h3>Primeiro Execulta a ação e depois Exibi o caractere // Não tem suporte as seguintes teclas: F1...F12, Alt, CTRL, SHIFT</h3>
+    <hr>
+    <h1>Exmplificando:</h1>
+    <label>onKeyUp: </label>
+    <input type="text" onkeyup="exibir1()" id="campo1"><br>
+    <label>onKeyDown: </label>
+    <input type="text" onkeydown="exibir2()" id="campo2"><br>
+    <label>onKeyPress: </label>
+    <input type="text" onkeypress="exibir3()" id="campo3">
+
+    <script>
+        function exibir1(){
+            let campo1 = document.querySelector("#campo1").value;  
+            alert(campo1)
+
+        }
+        function exibir2(){
+            let campo2 = document.querySelector("#campo2").value;            
+            alert(campo2)
+        }
+        function exibir3(){
+            let campo3 = document.querySelector("#campo3").value;
+            alert(campo3)       
+        }
+        
+
+    </script>
+    
+</body>
+</html>
